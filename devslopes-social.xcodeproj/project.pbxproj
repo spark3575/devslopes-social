@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B07322F21E8ABE89006D58AA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F11E8ABE89006D58AA /* FancyView.swift */; };
+		B07322F51E8AC039006D58AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F41E8AC039006D58AA /* Constants.swift */; };
+		B07322F71E8AC211006D58AA /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F61E8AC211006D58AA /* RoundBtn.swift */; };
+		B07322F91E8AC51E006D58AA /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F81E8AC51E006D58AA /* FancyField.swift */; };
+		B07322FB1E8AC6E1006D58AA /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322FA1E8AC6E1006D58AA /* FancyBtn.swift */; };
 		B0C304931E8A1DE70026A305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C304921E8A1DE70026A305 /* AppDelegate.swift */; };
 		B0C304951E8A1DE70026A305 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C304941E8A1DE70026A305 /* SignInVC.swift */; };
 		B0C304981E8A1DE70026A305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C304961E8A1DE70026A305 /* Main.storyboard */; };
@@ -19,6 +24,11 @@
 /* Begin PBXFileReference section */
 		3E8F25CCEC8CC85ADF47B0AE /* Pods-devslopes-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.release.xcconfig"; sourceTree = "<group>"; };
 		8771B187DE6A434E7FBD0488 /* Pods_devslopes_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopes_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07322F11E8ABE89006D58AA /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		B07322F41E8AC039006D58AA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B07322F61E8AC211006D58AA /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		B07322F81E8AC51E006D58AA /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		B07322FA1E8AC6E1006D58AA /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		B0C3048F1E8A1DE70026A305 /* devslopes-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devslopes-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C304921E8A1DE70026A305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0C304941E8A1DE70026A305 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -50,6 +60,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B07322F31E8AC011006D58AA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B07322F41E8AC039006D58AA /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		B0C304861E8A1DE60026A305 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +92,7 @@
 				B0C304A81E8A23410026A305 /* Model */,
 				B0C304A71E8A233B0026A305 /* View */,
 				B0C304A61E8A23310026A305 /* Controller */,
+				B07322F31E8AC011006D58AA /* Util */,
 				B0C304921E8A1DE70026A305 /* AppDelegate.swift */,
 				B0C304961E8A1DE70026A305 /* Main.storyboard */,
 				B0C304991E8A1DE70026A305 /* Assets.xcassets */,
@@ -95,6 +114,10 @@
 		B0C304A71E8A233B0026A305 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B07322F11E8ABE89006D58AA /* FancyView.swift */,
+				B07322F61E8AC211006D58AA /* RoundBtn.swift */,
+				B07322F81E8AC51E006D58AA /* FancyField.swift */,
+				B07322FA1E8AC6E1006D58AA /* FancyBtn.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07322F91E8AC51E006D58AA /* FancyField.swift in Sources */,
 				B0C304951E8A1DE70026A305 /* SignInVC.swift in Sources */,
+				B07322F71E8AC211006D58AA /* RoundBtn.swift in Sources */,
 				B0C304931E8A1DE70026A305 /* AppDelegate.swift in Sources */,
+				B07322F21E8ABE89006D58AA /* FancyView.swift in Sources */,
+				B07322F51E8AC039006D58AA /* Constants.swift in Sources */,
+				B07322FB1E8AC6E1006D58AA /* FancyBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
