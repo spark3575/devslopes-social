@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B049FA391E8BEADE00D8B203 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049FA381E8BEADE00D8B203 /* DataService.swift */; };
+		B06499301E8C677C006677B9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064992F1E8C677C006677B9 /* Post.swift */; };
 		B07322F21E8ABE89006D58AA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F11E8ABE89006D58AA /* FancyView.swift */; };
 		B07322F51E8AC039006D58AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F41E8AC039006D58AA /* Constants.swift */; };
 		B07322F71E8AC211006D58AA /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07322F61E8AC211006D58AA /* RoundBtn.swift */; };
@@ -29,6 +30,7 @@
 		3E8F25CCEC8CC85ADF47B0AE /* Pods-devslopes-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.release.xcconfig"; sourceTree = "<group>"; };
 		8771B187DE6A434E7FBD0488 /* Pods_devslopes_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopes_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049FA381E8BEADE00D8B203 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B064992F1E8C677C006677B9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B07322F11E8ABE89006D58AA /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		B07322F41E8AC039006D58AA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B07322F61E8AC211006D58AA /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		B0C304A81E8A23410026A305 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B064992F1E8C677C006677B9 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				B07323021E8B4275006D58AA /* CircleView.swift in Sources */,
 				B07322F91E8AC51E006D58AA /* FancyField.swift in Sources */,
 				B0C304951E8A1DE70026A305 /* SignInVC.swift in Sources */,
+				B06499301E8C677C006677B9 /* Post.swift in Sources */,
 				B07322F71E8AC211006D58AA /* RoundBtn.swift in Sources */,
 				B0C304931E8A1DE70026A305 /* AppDelegate.swift in Sources */,
 				B049FA391E8BEADE00D8B203 /* DataService.swift in Sources */,
