@@ -151,10 +151,14 @@
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="a0f-py-apb">
                                         <rect key="frame" x="16" y="20" width="45" height="38"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="APO-6k-oW7"/>
                                             <constraint firstAttribute="height" constant="38" id="B1v-6P-QvW"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aKx-bG-FNx" appends="YES" id="cuX-tG-JC1"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6T-RE-e8w">
                                         <rect key="frame" x="158.5" y="21" width="59.5" height="36"/>
@@ -172,9 +176,6 @@
                                     <constraint firstItem="a0f-py-apb" firstAttribute="top" secondItem="xRj-qj-8I7" secondAttribute="top" constant="20" id="rSL-hl-6ni"/>
                                     <constraint firstItem="a0f-py-apb" firstAttribute="leading" secondItem="xRj-qj-8I7" secondAttribute="leading" constant="16" id="tj0-wQ-8Cv"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ozf-mB-dKE" appends="YES" id="xjR-Td-Kf3"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaN-st-bhn" customClass="FancyView" customModule="devslopes_social" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="343" height="65"/>
@@ -320,6 +321,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="WZB-OR-KZC" id="rmh-WW-ltG"/>
+                                            <outlet property="likeImg" destination="bF5-0h-Rms" id="bPA-Wz-IaZ"/>
                                             <outlet property="likesLbl" destination="oEj-86-HXC" id="lVl-wE-GKo"/>
                                             <outlet property="postImg" destination="OG7-F9-9QR" id="R7z-YG-NV0"/>
                                             <outlet property="profileImg" destination="aY1-jF-nEl" id="6cT-Vj-MWS"/>
@@ -351,14 +353,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf9-uH-56T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ozf-mB-dKE">
-                    <connections>
-                        <action selector="signOutTapped:" destination="x85-1e-e60" id="6na-eW-d4S"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="pjE-g7-etJ">
                     <connections>
                         <action selector="addImageTapped:" destination="x85-1e-e60" id="Pk5-f0-hCG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="aKx-bG-FNx">
+                    <connections>
+                        <action selector="signOutTapped:" destination="x85-1e-e60" id="H69-sd-vWC"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

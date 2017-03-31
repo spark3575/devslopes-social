@@ -14,7 +14,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
-    @IBOutlet weak var captionField: FancyField!
+    @IBOutlet weak var captionField: FancyField!    
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -66,11 +66,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                         
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
             }
+            return cell
         } else {
             return PostCell()
         }
@@ -139,13 +138,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
+        
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("SHIN: ID removed from keychain \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "SignInVC", sender: nil)
     }
 }
-
 
 
 
