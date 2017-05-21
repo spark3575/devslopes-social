@@ -34,22 +34,22 @@ class SignInVC: UIViewController {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("SHIN: Unable to authenticate with Facebook - \(error)")
+                print("SHIN: Unable to authenticate with Facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
                 print("SHIN: User cancelled Facebook authentication")
             } else {
                 print("SHIN: Successfully authenticated with Facebook")
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
         }
         
     }
     
-    func firebaseAuth(_ credential: FIRAuthCredential) {
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+    func firebaseAuth(_ credential: AuthCredential) {
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("SHIN: Unable to authenticate with Firebase - \(error)")
+                print("SHIN: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
                 print("SHIN: Successfully authenticated with Firebase")
                 if let user = user {
@@ -63,7 +63,7 @@ class SignInVC: UIViewController {
     @IBAction func signInTapped(_ sender: Any) {
         
         if let email = emailField.text, let pwd = pwdField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("SHIN: Email user authenticated with Firebase")
                     if let user = user {
@@ -71,7 +71,7 @@ class SignInVC: UIViewController {
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("SHIN: Unable to authenticate with Firebase using email")
                         } else {
